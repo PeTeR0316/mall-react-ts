@@ -4,11 +4,13 @@ import { Link } from 'react-router-dom';
 import IMAGES from '../assets/images'
 
 const HeaderStyle = styled.div`
-    width: 100%;
+    width: 70%;
+    min-width: 1400px;
     height: 40px;
-    padding: 10px 0px;
     display: flex;
     justify-content: space-between;
+    margin: 0 auto;
+    padding: 10px 0px;
 
     .mainLogo {
         width: 200px;

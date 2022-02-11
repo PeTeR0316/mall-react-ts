@@ -28,7 +28,11 @@ interface itemsProps {
 }
 
 const SlideShowStyle = styled.div`
+    width: 70%;
+    min-width: 1400px;
+    margin: 0 auto;
     margin-bottom: 100px;
+
     .slide-show-frame{
         width: 300%;
         over-flow: hidden;

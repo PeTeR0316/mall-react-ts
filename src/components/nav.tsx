@@ -3,11 +3,14 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 const NavStyle = styled.div`
-    width: 100%;
+    width: 70%;
+    min-width: 1400px;
     padding: 10px 0px;
+    margin: 0 auto;
 
     .mainMenu {
-        display: inline-block;
+        display: flex;
+        justify-content: space-between;
         width: 100%
         height: 40px;
         margin: 0px;

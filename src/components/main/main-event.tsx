@@ -9,7 +9,9 @@ interface eventsProps {
 }
 
 const EventStyled = styled.div`
-    width: 100%;
+    width: 70%;
+    min-width: 1400px;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     margin-bottom: 100px;

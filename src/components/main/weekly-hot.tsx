@@ -47,6 +47,11 @@ const WeeklyHotStyle = styled.div`
     padding-top: 20px;
     margin-bottom: 100px;
 
+    .weeklyContainer {
+        width: 70%;
+        min-width:1400px;
+    }
+
     .weeklyLeftArea {
         width: 545px;
         height: 545px;
@@ -150,7 +155,7 @@ const WeeklyHot = () => {
                         // <div key={index}>
                         //     <img src={item.item} alt={item.name} className="slideImg" />
                         // </div>
-                        <div>
+                        <div className='weeklyContainer'>
                             <div className='weeklyLeftArea'>
                                 <img src={item.img1} alt={item.name1} className="weeklyBigImg" />
                             </div>

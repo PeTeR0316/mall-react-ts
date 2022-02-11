@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 
 import IMAGES from '../../assets/images';
@@ -14,6 +14,9 @@ interface itemsProps {
 }
 
 const ProductListStyle = styled.div`
+    width: 70%;
+    min-width: 1400px;
+    margin: 0 auto;
     margin-bottom: 100px;
     
     .titleArea {
@@ -26,12 +29,12 @@ const ProductListStyle = styled.div`
     }
 
     .productList {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+
         li {
             display: inline-block;
-            margin-bottom: 25px;
-            :not(:first-child) {
-                margin-left: 25px;
-            }
+            margin: 0 25px 25px 0;
         }
     }
 
@@ -43,6 +46,7 @@ const ProductListStyle = styled.div`
         transform: translateX(-50%);
         border: none;
         border-radius: 5px;
+    
         :hover {
             color: #ffffff;
             background-color: #3f3f3f;
@@ -52,6 +56,17 @@ const ProductListStyle = styled.div`
 `;
 
 const ProductList = ({title, subTitle} : ProductListProps) => {
+    const [listNum, setListNum] = useState<number>(1);
+    const [imgSrc, setImgSrc] = useState([
+        IMAGES.PRODUCT_IMG.img1,
+        IMAGES.PRODUCT_IMG.img2,
+        IMAGES.PRODUCT_IMG.img3,
+        IMAGES.PRODUCT_IMG.img4,
+        IMAGES.PRODUCT_IMG.img5,
+        IMAGES.PRODUCT_IMG.img6,
+        IMAGES.PRODUCT_IMG.img7,
+        IMAGES.PRODUCT_IMG.img8,
+    ])
 
     return (
         <ProductListStyle>
@@ -62,34 +77,23 @@ const ProductList = ({title, subTitle} : ProductListProps) => {
 
             <div className='productListArea'>
                 <ul className='productList'>
-                    <li>
-                        <img src={IMAGES.PRODUCT_IMG.img1} className="productImg" alt="productImg" />
-                    </li>
-                    <li>
-                        <img src={IMAGES.PRODUCT_IMG.img2} className="productImg" alt="productImg" />
-                    </li>
-                    <li>
-                        <img src={IMAGES.PRODUCT_IMG.img3} className="productImg" alt="productImg" />
-                    </li>
-                    <li>
-                        <img src={IMAGES.PRODUCT_IMG.img4} className="productImg" alt="productImg" />
-                    </li>
-                    <li>
-                        <img src={IMAGES.PRODUCT_IMG.img5} className="productImg" alt="productImg" />
-                    </li>
-                    <li>
-                        <img src={IMAGES.PRODUCT_IMG.img6} className="productImg" alt="productImg" />
-                    </li>
-                    <li>
-                        <img src={IMAGES.PRODUCT_IMG.img7} className="productImg" alt="productImg" />
-                    </li>
-                    <li>
-                        <img src={IMAGES.PRODUCT_IMG.img8} className="productImg" alt="productImg" />
-                    </li>
+                    {imgSrc.map((src, index) => {
+                        if(index < listNum * 4)
+                        return(
+                            <li>
+                                <img src={src} className="productImg" alt="productImg" />
+                            </li>
+                        )
+                    })}
                 </ul>
             </div>
 
-            <button type='button' className='moreBtn'>더보기 +</button>
+            <button type='button' 
+                className='moreBtn'
+                onClick={() => setListNum(listNum + 1)}
+            >
+                더보기 +
+            </button>
         </ProductListStyle>
     )
 }
