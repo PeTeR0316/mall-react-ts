@@ -1,5 +1,6 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
+import { Link, useParams } from 'react-router-dom';
 
 import IMAGES from '../../assets/images';
 
@@ -66,7 +67,8 @@ const ProductList = ({title, subTitle} : ProductListProps) => {
         IMAGES.PRODUCT_IMG.img6,
         IMAGES.PRODUCT_IMG.img7,
         IMAGES.PRODUCT_IMG.img8,
-    ])
+    ]);
+    const clickProduct = useParams();
 
     return (
         <ProductListStyle>
@@ -81,7 +83,13 @@ const ProductList = ({title, subTitle} : ProductListProps) => {
                         if(index < listNum * 4)
                         return(
                             <li>
-                                <img src={src} className="productImg" alt="productImg" />
+                                <Link to={`/product/?product=product_img1`}>
+                                    <img src={src} 
+                                        className="productImg" 
+                                        alt="productImg" 
+                                        key="product_img1"
+                                    />
+                                </Link>
                             </li>
                         )
                     })}

@@ -7,6 +7,7 @@ import ProductInfo from './pages/product';
 
 const AppStyle = styled.div`
   margin: 0 auto;
+  box-sizing: border-box;
 
   a {
     text-decoration: none;
@@ -24,7 +25,7 @@ const App = () => {
     <AppStyle className="App">
       <Routes>
         <Route path="/" element={<MainPage />} />
-        <Route path="/product" element={<ProductInfo />} />
+        <Route path="/product/*" element={<ProductInfo />} />
       </Routes>
     </AppStyle>
   );

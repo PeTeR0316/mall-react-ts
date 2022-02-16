@@ -48,15 +48,24 @@ const IMAGES = {
     ],
 
     PRODUCT_IMG :{
-            'img1' : '/assets/images/product_img11.webp',
-            'img2' : '/assets/images/product_img12.webp',
-            'img3' : '/assets/images/product_img13.webp',
-            'img4' : '/assets/images/product_img14.webp',
-            'img5' : '/assets/images/product_img15.jpg',
-            'img6' : '/assets/images/product_img16.webp',
-            'img7' : '/assets/images/product_img17.webp',
-            'img8' : '/assets/images/product_img18.webp',
-        },
+        'img1' : '/assets/images/product_img11.webp',
+        'img2' : '/assets/images/product_img12.webp',
+        'img3' : '/assets/images/product_img13.webp',
+        'img4' : '/assets/images/product_img14.webp',
+        'img5' : '/assets/images/product_img15.jpg',
+        'img6' : '/assets/images/product_img16.webp',
+        'img7' : '/assets/images/product_img17.webp',
+        'img8' : '/assets/images/product_img18.webp',
+    },
+
+    PRODUCT_IMG1 : {
+        'detail1': '/assets/images/product_img1/detail_img1.jpg',
+        'detail2': '/assets/images/product_img1/detail_img2.jpg',
+        'detail3': '/assets/images/product_img1/detail_img3.jpg',
+        'detail4': '/assets/images/product_img1/detail_img4.jpg',
+        'detail5': '/assets/images/product_img1/detail_img5.jpg',
+        'detail6': '/assets/images/product_img1/detail_img6.jpg',
+    }
 
 
 }

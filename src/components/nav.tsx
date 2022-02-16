@@ -3,21 +3,21 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 const NavStyle = styled.div`
-    width: 70%;
-    min-width: 1400px;
+    width: 100%;
     padding: 10px 0px;
-    margin: 0 auto;
+    border-top: 1px solid #e8e8e8;
+    border-bottom: 1px solid #e8e8e8;
 
     .mainMenu {
+        width: 70%;
+        min-width: 1400px;
+        margin: 0 auto;
         display: flex;
         justify-content: space-between;
-        width: 100%
-        height: 40px;
-        margin: 0px;
         
         .mainMenuList {
             display: inline-block;
-            padding: 0px 5px;
+            padding: 10px 5px;
             font-size: 13px
         }
     }
